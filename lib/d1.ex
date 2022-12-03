@@ -14,11 +14,12 @@ defmodule D1 do
   end
 
   defp elves(file) do
-    input = File.read!(file)
-
-    Regex.split(~r{\n\n}, input)
+    file
+    |> File.read!()
+    |> String.split("\n\n")
     |> Enum.map(fn line ->
-      Regex.split(~r{\n}, line)
+      line
+      |> String.split("\n")
       |> Enum.map(&String.to_integer/1)
       |> Enum.sum()
     end)
