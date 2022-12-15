@@ -31,11 +31,11 @@ defmodule D10 do
 
     grid = draw(grid, cycles, 0)
 
-    IO.puts ""
-    0..5
-    |> Enum.each(fn y ->
-        IO.inspect Enum.reduce(0..39, "", fn x, acc -> acc <> Map.get(grid, {x, y}) end)
-    end)
+    # IO.puts ""
+    # 0..5
+    # |> Enum.each(fn y ->
+    #     IO.inspect Enum.reduce(0..39, "", fn x, acc -> acc <> Map.get(grid, {x, y}) end)
+    # end)
 
     :ok
   end
